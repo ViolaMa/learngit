@@ -1,0 +1,190 @@
+@charset "UTF-8";
+
+/*css 初始化 */
+
+html,body,ul,li,ol,dl,dd,dt,p,h1,h2,h3,h4,h5,h6,
+form,fieldset,legend,img {
+    margin: 0;
+    padding: 0;
+}
+
+fieldset,img,input,button {
+    border: none;
+    padding: 0;
+    margin: 0;
+    outline-style: none;
+}
+
+ul,ol {
+    list-style: none;
+}
+
+input {
+    padding-top: 0;
+    padding-bottom: 0;
+    font-family: "SimSun", "宋体";
+}
+
+select,input {
+    vertical-align: middle;
+}
+
+select,input,textarea {
+    font-size: 12px;
+    margin: 0;
+}
+
+textarea {
+    resize: none;
+}
+
+img {
+    border: 0;
+    vertical-align: middle;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+body {
+    font: 12px/150% Arial, Verdana, "\5b8b\4f53";
+    color: #666;
+    background: #fff;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 100%;
+}
+
+s,i,em {
+    font-style: normal;
+    text-decoration: none;
+}
+
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+.clearfloat:after{
+	display: block;
+	clear:both;
+	content: "";
+	visibility:hidden;
+	height: 0;
+}
+.clearfloat{
+	zoom:1;
+}
+
+/*页面样式*/
+
+.btn-default{
+	color: #ffffff;
+	background-color: #3385ff;
+	border-bottom: 1px solid #2d78f4;
+	cursor: pointer;
+}
+
+.container{
+	/* position: relative; */
+	min-width: 810px;
+	min-height: 600px;
+	height: 100%;
+	display: block;
+	overflow: hidden;
+}
+.head{
+	position: relative;
+	margin-top:10px;
+}
+.head .menu{
+	
+	padding: 0 96px 0 0;
+}
+.head .menu a{
+	color: #333;
+	font-weight: bold;
+	margin-left: 20px;
+}
+.head .menu a:hover{
+	color: #00c;
+}
+.head .more{
+	position: absolute;
+	right: 0;
+	top: 0;
+
+}
+.head .more a{
+	text-decoration: none;
+	width: 85px;
+	padding: 2px;
+}
+.search{
+	position: relative;
+	margin:0 auto;
+	width:640px;	
+	top:150px;
+}
+.search .logo {
+	margin:0 auto;
+	width: 270px;
+	top:38.2%;
+}
+.search .logo img{
+	width: 270px;
+	height: 129px;
+}
+.search .search-input{	
+	width: 500px;
+	height: 34px;
+	padding: 0 40px 0 5px;
+	border:1px solid #dddddd;
+}
+.search .search-wrap{
+	position: absolute;
+}
+.search .search-btn{
+	width: 100px;
+	height: 36px;
+	font-size: 15px;	
+}
+.footer-wrap{
+	width: 640px;
+	margin:0 auto;
+}
+.footer {
+	position: absolute;
+	bottom: 50px;
+	margin-right: 20px;
+}
+.footer .info{
+	display: inline-block;
+	padding-right: 30px;
+}
+.footer p{
+	color: #999;
+	font-size: 12px;
+	line-height: 23px;
+}
+.footer a{
+	color: #999;
+	font-size: 12px;
+}
+.footer .qrcode-text{
+	margin:10px 0 0 10px;
+
+}
+.footer .qrcode{
+	width: 60px;
+	height: 60px;
+	overflow: hidden;
+}
+.footer .others a{
+	margin-right: 20px;
+}

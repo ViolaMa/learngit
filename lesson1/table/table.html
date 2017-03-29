@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="表格/输入框等">
+    <meta name="description" content="表格的应用">
+    <title>表格的应用</title>
+</head>
+
+<body>
+    <form enctype="multipart/form" action="reciver.php">
+        <table border="1" cellspacing="0">
+            <tbody>
+                <tr>
+                    <td><label for="username"></label>请输入姓名：</td>
+                    <td>
+                        <input type="text" id="username"/>
+                        <input type="hidden" name="">
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="sex"></label>请选择性别：</td>
+                    <td>
+                        <select name="select" id="sex">
+                            <option value="male">男</option>
+                            <option value="female">女</option>
+                        </select>
+                    </td>
+                </tr>                
+                <tr>
+                    <td>你喜欢的运动</td>
+                    <td>
+                        <input type="checkbox" id="sports_01" name="checkbox_01" /><label for="sports_01">羽毛球</label>
+                        <input type="checkbox" id="sports_02" name="checkbox_01" /><label for="sports_02">慢跑</label>
+                        <input type="checkbox" id="sports_03" name="checkbox_01" /><label for="sports_03">游泳</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>你爱吃的菜</td>
+                    <td>
+                        <input type="radio" id="food_01" name="radio_01"/><label for="food_01">西兰花</label>
+                        <input type="radio" id="food_02" name="radio_01"/><label for="food_02">白菜</label>
+                        <input type="radio" id="food_03" name="radio_01"/><label for="food_03">豆芽</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="textarea"></label>我的简介</td>
+                    <td>
+                        <textarea name="textarea" id="textarea" cols="30" rows="10"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="fileField"></label>上传头像</td>
+                    <td>
+                        <input type="file" name="fileField" id="fileField" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>分组</td>
+                    <td>
+                        <fieldset>
+                            <legend>篮球小组</legend>
+                            <ul>
+                                <li>姚明</li>
+                                <li>易建联</li>
+                            </ul>
+                        </fieldset>
+                        <fieldset>
+                            <legend>篮球小组</legend>
+                            <ul>
+                                <li>姚明</li>
+                                <li>易建联</li>
+                            </ul>
+                        </fieldset>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="imageBtn">图片按钮</label></td>
+                    <td><input type="image" name="imageBtn" src="panda.jpg"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="submit" name="submit" value="提交" />
+                    </td>
+                    <td>
+                        <input type="reset" name="reset" value="重置" />
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+</body>
+
+</html>
