@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>实战盒子模型与弹性盒模型</title>
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+
+<body>
+    <div class="container">
+        <p>上下两个div，除去border-box不同外，其余border、width、height、margin、padding属性均相同</p>
+        <div class="boder-box-div">
+            <p>box-sizing:border-box</p>
+        </div>
+        <div class="content-box-div">
+            <p>box-sizing:content-box</p>
+        </div>
+    </div>
+    <hr/>
+    <div class="container">
+        <div class="column"><img src="images/resizeApi.png">
+            <p>cloumn分栏</p>
+            <p>rows:主轴与行内轴方向作为默认的书写模式。即横向从左到右排列（左对齐）。row-reverse：对齐方式与row相反。column：主轴与块轴方向作为默认的书写模式。即纵向从上往下排列（顶对齐）。column-reverse：对齐方式与column相反。</p>
+            <p>来自Newsshooter的测试，A6300和A6500均使用的是28-135mm f4镜头，均采用闪迪64GB UHS-1 U3 Extreme Pro，均录制4K /25P 100 Mbps视频素材，测试地点在室内，温度比较高。A6300在12分30秒左右的时候就过热关机了，A6500一直到29分59秒的单次视频录制上限都没有明显的问题。</p>
+            <p>#ELLE带你看时装周# @MISSYSKINS 2017早春系列以LOVE KILLS为主题，以利落剪裁搭配运动风格，带来活力年轻的装扮。而后半部分的2017春夏系列，则围绕HEAVENLY CREATURES为主题，诠释趣味与柔美的融合，耳坠配饰尤为吸睛。</p>
+        </div>
+    </div>
+    <hr/>
+    <p>新弹性盒子的flex布局及使用order调换顺序</p>
+    <div class="container flex">
+        <div class="first">div 1</div>
+        <div class="second">div 2</div>
+        <div class="third"> div 3</div>
+    </div>
+    <p>垂直方向的弹性盒模型布局</p>
+    <div class="container flex-direction">
+        <div class="first">div 1</div>
+        <div class="second">div 2</div>
+        <div class="third"> div 3</div>
+    </div>
+    <hr/>
+    <p>使用旧版弹性盒模型进行居中布局</p>
+    <div class="container old-flex">
+        <div class="content"><img src="images/resizeApi.png"></div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,162 @@
+@charset "UTF-8";
+
+/*css 初始化 */
+
+html, body, img {
+    margin: 0;
+    padding: 0;
+}
+img {
+    border: 0;
+}
+
+body {
+    font: 12px/150% Arial, Verdana, "\5b8b\4f53";
+    color: #666;
+    background: #fff;
+}
+p{
+    text-align: center;
+}
+
+.container {
+    position: relative;
+    margin: 50px auto;
+    /*overflow: hidden;*/
+    height: 320px;
+    width: 320px;
+}
+
+.container div {
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    border: 1px solid #fcc400;
+}
+
+.first .top {
+    margin-left: 110px;
+    margin-top: 10px;
+    background-color: #00afe8;
+    border-bottom: none;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    box-shadow: 0 0 5px 5px #dddddd;
+    display: block;
+}
+
+.first .left {
+    margin-left: 10px;
+    position: absolute;
+    background-color: #00bfe8;
+    border-right: none;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    box-shadow: 0 0 5px 5px #dddddd;
+}
+
+.first .center {
+    position: absolute;
+    margin-left: 110px;
+    background-color: #00b4e8;
+    border: none;
+    box-shadow: 0 0 5px 4px #0499c9;
+    border-radius: 2px;
+    z-index: 9;
+}
+
+.first .center img {
+    width: 64px;
+    height: 64px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.first .right {
+    position: absolute;
+    margin-left: 210px;
+    background-color: #02c4d5;
+    border-left: none;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 0 0 5px 5px #dddddd;
+}
+
+.first .bottom {
+    display: block;
+    background-color: #00afe8;
+    margin-left: 110px;
+    margin-top: 100px;
+    border-top: none;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 0 0 5px 5px #dddddd;
+}
+
+.second div {
+    background-color: #fd0d53;
+}
+
+.second .top {
+    display: block;
+    margin-left: 100px;
+}
+
+.second .left {
+    float: left;
+}
+
+.second .center {
+    float: left;
+    border: none;
+}
+
+.second .center img {
+    width: 64px;
+    height: 64px;
+    margin-top: 14px;
+}
+
+.second .right {
+    float: left;
+}
+
+.second .bottom {
+    display: block;
+    margin-top: 100px;
+    margin-left: 100px;
+}
+
+.third div {
+    background-color: #37b3c8;
+    padding: 0;
+    margin: 0;
+    border:none;
+}
+.third .top{
+    float: left;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+.third .left{
+    float: left;
+}
+.third .center{
+    float: left;
+    display: -webkit-box;
+    -webkit-box-pack:center;
+    -webkit-box-align: center;
+}
+.third .right{
+    float: left;
+}
+.third .bottom{
+    float: left;
+    margin-left: 100px;
+}
+.third .center img{
+    width: 64px;
+    height:64px;
+}
