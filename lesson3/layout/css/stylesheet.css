@@ -1,0 +1,76 @@
+@charset "utf-8";
+body,
+html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6,
+form, fieldset, legend, img {
+    margin: 0;
+    padding: 0;
+}
+
+div {
+    box-sizing: border-box;
+}
+
+.container {
+    margin: 0 auto;
+    min-width: 640px;
+}
+
+.header {
+    height: 80px;
+    padding: 20px;
+    background-color: rgb(57, 121, 226);
+    color: #ffffff;
+}
+
+.main {
+    overflow: hidden;
+}
+
+.main .middle {
+    float: left;
+    width: 100%;
+    margin-bottom: -9999px;
+    padding-bottom: 9999px;
+    padding-top: 20px;
+}
+
+.main .middle .content {
+    margin-left: 200px;
+    *margin-left: 200px;
+    margin-right: 200px;
+    *margin-right: 200px;
+    margin-bottom: 20px;
+    padding: 0 20px 20px;
+}
+
+.main .left {
+    float: left;
+    width: 200px;
+    background-color: #f4f4f4;
+    padding: 20px;
+    margin-left: -100%;
+    *margin-left: -100%;
+    margin-bottom: -9999px;
+    padding-bottom: 9999px;
+}
+
+.main .right {
+    width: 200px;
+    float: left;
+    background-color: #f4f4f4;
+    padding: 20px;
+    margin-left: -200px;
+    *margin-left: -200px;
+    margin-bottom: -9999px;
+    padding-bottom: 9999px;
+}
+
+.left .inner {
+    padding-bottom: 20px;
+}
+
+.footer {
+    padding: 20px;
+    background-color: #666;
+    color: #ffffff;
+}

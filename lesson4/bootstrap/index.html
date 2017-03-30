@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>后台管理系统首页</title>
+    <link rel="stylesheet" href="css/stylesheet.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/jquery-1.11.3.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row primary nav">
+        <nav>
+            <div class="logo fl"><a href="#"><span class="glyphicon glyphicon-tree-conifer"></span>logo</a></div>
+            <div class="fr nav-right">
+                <ul>
+                    <li><input type="text" class="serach-input"/><span
+                            class="glyphicon glyphicon-search theme search-btn"></span></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-envelope "></span></a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-user "></span></a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-cog "></span></a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div class="row wrap-bottom">
+        <aside>
+            <div class="col-md-2 menu">
+                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingOne">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"
+                                   aria-expanded="true" aria-controls="collapseOne">
+                                    <span class="glyphicon glyphicon-home theme"></span> Dashboard
+                                </a>
+                            </h4>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTwo">
+                            <h4 class="panel-title">
+                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion"
+                                   href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                                    <span class="glyphicon glyphicon-shopping-cart theme"></span> 订单管理
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseTwo" class="panel-collapse collapse in" role="tabpanel"
+                             aria-labelledby="headingThree">
+                            <div class="panel-body">
+                                <ul>
+                                    <li><a href="">待发货</a></li>
+                                    <li><a href="">已发货</a></li>
+                                    <li><a href="">退款申请</a></li>
+                                    <li><a href="">已完结</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingThree">
+                            <h4 class="panel-title">
+                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion"
+                                   href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    <span class="glyphicon glyphicon-gift theme"></span> 产品管理
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseThree" class="panel-collapse collapse" role="tabpanel"
+                             aria-labelledby="headingThree">
+                            <div class="panel-body">
+                                <ul>
+                                    <li><a href="">分类管理</a></li>
+                                    <li><a href="">产品管理</a></li>
+                                    <li><a href="">商品评价</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingFour">
+                            <h4 class="panel-title">
+                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion"
+                                   href="#collapseFour"
+                                   aria-expanded="false" aria-controls="collapseFour">
+                                    <span class="glyphicon glyphicon-user theme"></span> 用户管理
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseFour" class="panel-collapse collapse" role="tabpanel"
+                             aria-labelledby="headingTwo">
+                            <div class="panel-body">
+                                <ul>
+                                    <li><a href="">用户列表</a></li>
+                                    <li><a href="">留言管理</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingFive">
+                            <h4 class="panel-title">
+                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion"
+                                   href="#collapseFive"
+                                   aria-expanded="false" aria-controls="collapseFive">
+                                    <span class="glyphicon glyphicon-leaf theme"></span> 新闻管理
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseFive" class="panel-collapse collapse" role="tabpanel"
+                             aria-labelledby="headingTwo">
+                            <div class="panel-body">
+                                <ul>
+                                    <li><a href="">本站新闻</a></li>
+                                    <li><a href="">行业新闻</a></li>
+                                    <li><a href="">本站新闻</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingSix">
+                            <h4 class="panel-title">
+                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion"
+                                   href="#collapseSix"
+                                   aria-expanded="false" aria-controls="collapseSix">
+                                    <span class="glyphicon glyphicon-leaf theme"></span> 销售数据
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseSix" class="panel-collapse collapse" role="tabpanel"
+                             aria-labelledby="headingTwo">
+                            <div class="panel-body">
+                                <ul>
+                                    <li><a href="">进货数据</a></li>
+                                    <li><a href="">销售数据</a></li>
+                                    <li><a href="">异常数据</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <article>
+            <div class="col-md-10 content">
+                <div class="row content-title">
+                    <div class="col-md-12">
+                        <h2>Dashboard<a href="#" class="fr" title="编辑面板"><span
+                                class="glyphicon glyphicon-th"></span></a></h2>
+                    </div>
+                </div>
+                <div class="row content-wrap">
+                    <div class="col-md-4">
+                        <div class="panel panel-default">
+                            <div class="panel-heading pure">待办事项<a href="#" class="fr">详细&gt;&gt;</a></div>
+                            <div class="panel-body">
+                                <div class="list-group">
+                                    <a href="#" class="list-group-item">电话联系供货商A
+                                        <small></small>
+                                    </a>
+                                    <a href="#" class="list-group-item">团队会议
+                                        <small> 团队各人汇报工作</small>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="panel panel-default">
+                            <div class="panel-heading pure">销售数据<a href="#" class="fr">详细&gt;&gt;</a></div>
+                            <div class="panel-body">
+                                <table class="table table-hover">
+                                    <thead>
+                                    <tr>
+                                        <td>品名</td>
+                                        <td>当天/(单位:件)</td>
+                                        <td>前一天/(单位:件)</td>
+                                        <td>本周/(单位:件)</td>
+                                        <td>当月/(单位:件)</td>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td><a href="#">女式长款呢子大衣粉红色</a></td>
+                                        <td>0</td>
+                                        <td>23</td>
+                                        <td>101</td>
+                                        <td>426</td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="#">明星同款黑色长裙</a></td>
+                                        <td>2</td>
+                                        <td>16</td>
+                                        <td>59</td>
+                                        <td>357</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                                <nav>
+                                    <ul class="pagination pagination-sm">
+                                        <li><a href="#">1</a></li>
+                                        <li class="active"><a href="#">2</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row content-wrap">
+                    <div class="col-md-8">
+                        <div class="panel panel-default">
+                            <div class="panel-heading pure">待发货订单 <span class="label label-default pure">108</span><a
+                                    href="#" class="fr">详细&gt;&gt;</a>
+                            </div>
+                            <div class="panel-body">
+                                <div class="list-group">
+                                    <a href="#" class="list-group-item">女式长款呢子大衣粉红色<span class="badge">14</span></a>
+                                    <a href="#" class="list-group-item">明星同款黑色长裙<span class="badge">35</span></a>
+                                    <a href="#" class="list-group-item">军绿色明星同款长款羊毛呢子大衣<span class="badge">20</span></a>
+                                    <a href="#" class="list-group-item">纯白长袖打底衬衫<span class="badge">16</span></a>
+                                    <a href="#" class="list-group-item">牛仔长裤加绒<span class="badge">39</span></a>
+                                </div>
+                                <nav>
+                                    <ul class="pagination pagination-sm">
+                                        <li><a href="#">1</a></li>
+                                        <li class="active"><a href="#">2</a></li>
+                                        <li><a href="#">3</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="panel panel-default">
+                            <div class="panel-heading pure">待处理异常 <span class="label label-default pure">2</span><a
+                                    href="#" class="fr">详细&gt;&gt;</a></div>
+                            <div class="panel-body">
+                                <div class="list-group">
+                                    <a href="#" class="list-group-item">明星同款黑色长裙<span
+                                            class="badge badge-danger">退款</span></a>
+                                    <a href="#" class="list-group-item">女式长款呢子大衣粉红色<span
+                                            class="badge badge-warning">投诉</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="panel panel-default">
+                            <div class="panel-heading pure">月度目标完成进度<a href="#" class="fr">详细&gt;&gt;</a></div>
+                            <div class="panel-body">
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-success" style="width: 65%"
+                                         title="65% 已完成">
+                                        <span class="sr-only">65% 已完成</span>
+                                    </div>
+                                    <div class="progress-bar progress-bar-warning progress-bar-striped"
+                                         style="width: 5%" title="5% 待发货">
+                                        <span class="sr-only">5% 待发货</span>
+                                    </div>
+                                    <div class="progress-bar progress-bar-danger" style="width: 0.5%" title="0.5% 订单异常">
+                                        <span class="sr-only">0.5% 订单异常</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </div>
+</div>
+</body>
+</html>
