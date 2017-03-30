@@ -1,0 +1,117 @@
+@charset "utf-8";
+
+/*css 初始化 */
+html {
+    font-size: 14px;
+}
+
+html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6,
+form, fieldset, legend, img {
+    margin: 0;
+    padding: 0;
+}
+
+fieldset, img, input, button {
+    border: none;
+    padding: 0;
+    margin: 0;
+    outline-style: none;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+input {
+    padding-top: 0;
+    padding-bottom: 0;
+    font-family: "SimSun", "宋体";
+}
+
+select, input {
+    vertical-align: middle;
+}
+
+select, input, textarea {
+    font-size: 12px;
+    margin: 0;
+}
+
+textarea {
+    resize: none;
+}
+
+img {
+    border: 0;
+    vertical-align: middle;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #666;
+    background: #fff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-decoration: none;
+    font-weight: normal;
+    font-family: 'Microsoft YaHei UI', "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin-bottom: 10px;
+}
+
+s, i, em {
+    font-style: normal;
+    text-decoration: none;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.clearfloat:after {
+    display: block;
+    clear: both;
+    content: "";
+    visibility: hidden;
+    height: 0;
+}
+
+.clearfloat {
+    zoom: 1;
+}
+
+.container {
+    width: 800px;
+    margin: 50px auto;
+    line-height: 35px;
+    box-sizing: border-box;
+    padding: 20px;
+}
+.form-control{
+    width: 100%;
+    border:1px solid #dddddd;
+    border-radius: 3px;
+    line-height: 25px;
+    padding-left: 5px;
+}
+.btn{
+    padding: 5px 12px;
+    color: #ffffff;
+    background-color: #00afe8;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.container p{
+    font-size: 1.5rem;
+}
+.container p:first-child{
+    letter-spacing: 2px;
+}

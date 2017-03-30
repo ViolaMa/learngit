@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=320,maximum-scale=1,user-scalable=no">
+    <title>百度首页自适应</title>
+    <link rel="stylesheet" href="css/stylesheet.css" type="text/css"/>
+    <script src="js/jquery-1.11.3.js"></script>
+    <script src="js/utils.js"></script>
+</head>
+<body>
+<div class="web">
+    <div class="container">
+        <header>
+            <div class="top fr">
+                <nav>
+                    <div class="nav">
+                        <a href="https://sh.nuomi.com/" target="_blank">糯米</a>
+                        <a href="http://news.baidu.com/" target="_blank">新闻</a>
+                        <a href="https://www.hao123.com/">好123</a>
+                        <a href="http://map.baidu.com/">地图</a>
+                        <a href="http://v.baidu.com/">视频</a>
+                        <a href="http://tieba.baidu.com/">贴吧</a>
+                        <a href="" id="toLogin">登录</a>
+                        <a href="" id="usernameNav" class="hidden"></a>
+                        <a href="https://www.baidu.com/gaoji/preferences.html">设置</a>
+                    </div>
+                </nav>
+                <aside>
+                    <div class="fr more">
+                        <a href="#" class="show-more btn-default">更多产品</a>
+                        <div class="more-div">
+                            <span class="more-title">更多产品</span>
+                            <ul>
+                                <li><a href="#"><span class="music"></span>
+                                    <p>音乐</p></a></li>
+                                <li><a href="#"><span class="picture"></span>
+                                    <p>图片</p></a></li>
+                                <li><a href="#"><span class="knowledge"></span>
+                                    <p>知道</p></a></li>
+                                <li><a href="#"><span class="books"></span>
+                                    <p>文库</p></a></li>
+                                <li><a href="#"><span class="ranks"></span>
+                                    <p>排行榜</p></a></li>
+                            </ul>
+                            <span><a href="#">全部产品&gt;&gt;</a></span>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </header>
+        <article>
+            <section>
+                <div class="logo"><img src="images/bd_logo1.png" alt="baidu"/></div>
+            </section>
+            <section>
+                <div class="wrapper">
+                    <span class="fl input-border"><input type="text" class="search-input"/><span
+                            class="camera"></span></span>
+                    <span class="fl"><button type="button" class="btn-default search-btn">百度一下</button></span>
+                </div>
+            </section>
+        </article>
+        <footer>
+            <div class="footer-wrap">
+                <div class="footer">
+                    <div class="info mobile-baidu">
+                        <div class="qrcode fl"><img src="images/zbios_a4b2d86f.png"/></div>
+                        <div class="qrcode-text fl">
+                            <p><b>手机百度</b></p>
+                            <p>快人一步</p>
+                        </div>
+                    </div>
+                    <div class="info">
+                        <div class="qrcode fl"><img src="images/zbios_a4b2d86f.png"/></div>
+                        <div class="qrcode-text fl">
+                            <p><b>百度糯米</b></p>
+                            <p>一元大餐</p>
+                        </div>
+                    </div>
+                    <div class="info">
+                        <p class="others">
+                            <a href="https://www.baidu.com/cache/sethelp/help.html" target="_blank">把百度设为首页</a>
+                            <a href="http://home.baidu.com/" target="_blank">关于百度</a>
+                            <a href="http://home.baidu.com/" target="_blank">About Baidu</a>
+                            <a href="http://e.baidu.com/?refer=888&subsite=sh" target="_blank">百度推广</a>
+                        </p>
+                        <p>&copy; 2016 Baidu <a href="" target="_blank">使用百度前必读</a>意见反馈 京ICP证030173号<span
+                                class="icon-copyright"></span></p>
+                        <p><span class="icon-recordcode"></span><a
+                                href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11000002000001"
+                                target="_blank" class="margin-left">京公网安备11000002000001号</a></p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</div>
+<div id="loginPopup" class="popup">
+    <div class="mask"></div>
+    <div id="login" class="login">
+        <!--登录框-->
+        <div class="login-title">
+            <h3><i class="logo-icon"></i> 登录百度账号</h3>
+            <button id="closeLogin" class="fr close-btn"><span></span></button>
+        </div>
+        <div class="login-content">
+            <form action="">
+                <!--测试 username: admin,password:admin-->
+                <div><input type="text" id="username" name="username"/><i class="login-icon icon-username"></i></div>
+                <div><input type="text" id="password" name="password"/><i class="login-icon icon-password"></i></div>
+                <div><label><input type="checkbox">下次自动登录</label>
+                    <a href="https://passport.baidu.com/?getpassindex&tt=1481616661302&gid=E387A74-197E-4C5E-B62D-CADC36447B60&tpl=mn&u=https%3A%2F%2Fwww.baidu.com%2Findex.php%3Ftn%3Dmonline_3_dg"
+                       class="fr">登录遇到问题</a></div>
+                <div>
+                    <button id="loginBtn" type="button" class="btn-default">登录</button>
+                </div>
+            </form>
+        </div>
+        <div class="login-footer"></div>
+    </div>
+</div>
+<div class="wap">
+    <nav>
+        <div class="top">
+            <div class="weather-content hidden"></div>
+            <div class="nav">
+                <div class="fl weather-outline">
+                    <div class="icon-weather"><i></i></div>
+                    <div class="num-weather">15°</div>
+                    <div class="weather-status"><p>上海</p>
+                        <p>空气 40 <i class="icon-down"></i></p></div>
+                </div>
+                <div class="fr personal">
+                    <div class="user-warp">
+                        <a href="#">登录</a></div>
+                    <div class="skin">
+                        <a href="#" title="换肤"><i></i></a></div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <article>
+        <section>
+            <div class="warp">
+                <div class="logo"><img src="images/plus_logo.png" alt="baidu"/></div>
+                <form action="">
+                    <div class="search-warp">
+                        <input type="text" class="search-input" maxlength="64">
+                        <div class="search-btn-warp">
+                            <button type="button" class="btn-default search-btn">百度一下</button>
+                        </div>
+                    </div>
+                </form>
+                <div class="columns">
+                    <ul>
+                        <li><a href="#"><i class="focus"></i>
+                            <p>关注</p></a></li>
+                        <li><a href="#"><i class="news"></i>
+                            <p>新闻</p></a></li>
+                        <li><a href="#"><i class="novel"></i>
+                            <p>小说</p></a></li>
+                        <li><a href="#"><i class="video"></i>
+                            <p>视频</p></a></li>
+                        <li><a href="#"><i class="nuomi"></i>
+                            <p>糯米</p></a></li>
+                        <li><a href="#"><i class="map"></i>
+                            <p>地图</p></a></li>
+                    s</ul>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="content">
+                <div class="news-item">
+                    <a href="#">
+                        <h2>大熊猫“偷渡”失败出尽洋相！众人打麻药紧急救援 </h2>
+                        <div class="pic-content">
+                            <div class="img-warp"><img src="images/news_1_1.JPEG" alt="大熊猫“偷渡”失败出尽洋相！众人打麻药紧急救援"/></div>
+                            <div class="img-warp"><img src="images/news_1_2.JPEG" alt="大熊猫“偷渡”失败出尽洋相！众人打麻药紧急救援"/></div>
+                            <div class="img-warp"><img src="images/news_1_3.JPEG" alt="大熊猫“偷渡”失败出尽洋相！众人打麻药紧急救援"/></div>
+                        </div>
+                        <div class="news-form"><span>大河网</span><span class="news-time">08:35</span><span
+                                class="icon-hot">热点</span></div>
+                    </a>
+                </div>
+                <div class="news-item">
+                    <a href="https://www.baidu.com/#iact=wiseindex%2Ftabs%2Fnews%2Factivity%2Fnewsdetail%3D%257B%2522linkData%2522%253A%257B%2522name%2522%253A%2522iframe%252Fmib-iframe%2522%252C%2522id%2522%253A%2522feed%2522%252C%2522index%2522%253A0%252C%2522url%2522%253A%2522https%253A%252F%252Fm.baidu.com%253Faction%253Dnewsdetail%2526nid%253D17428724848799380880%2526n_type%253D0%2522%252C%2522title%2522%253A%2522%25E6%2590%259C%25E7%258B%2590%25E6%2596%25B0%25E9%2597%25BB%2522%257D%257D">
+                        <h2>【人物】朱镕基之子谈楼市：库存120亿平可住4亿人，还能搞吗？ </h2>
+                        <div class="pic-content">
+                            <div class="img-warp"><img src="images/news_2_1.JPEG"
+                                                       alt="【人物】朱镕基之子谈楼市：库存120亿平可住4亿人，还能搞吗？ "/></div>
+                            <div class="img-warp"><img src="images/news_2_2.JPEG"
+                                                       alt="【人物】朱镕基之子谈楼市：库存120亿平可住4亿人，还能搞吗？ "/></div>
+                            <div class="img-warp"><img src="images/news_2_3.JPEG"
+                                                       alt="【人物】朱镕基之子谈楼市：库存120亿平可住4亿人，还能搞吗？ "/></div>
+                        </div>
+                        <div class="news-form"><span>大河网</span><span class="news-time">08:35</span><span
+                                class="icon-hot">热点</span></div>
+                    </a>
+                </div>
+                <div class="news-item">
+                    <a href="https://www.baidu.com/#iact=wiseindex%2Ftabs%2Fnews%2Factivity%2Fnewsdetail%3D%257B%2522linkData%2522%253A%257B%2522name%2522%253A%2522iframe%252Fmib-iframe%2522%252C%2522id%2522%253A%2522feed%2522%252C%2522index%2522%253A0%252C%2522url%2522%253A%2522https%253A%252F%252Fm.baidu.com%253Faction%253Dnewsdetail%2526nid%253D9638073106752360266%2526n_type%253D0%2522%252C%2522title%2522%253A%2522%25E6%2590%259C%25E7%258B%2590%25E5%259B%25BD%25E9%2599%2585%2522%257D%257D">
+                        <h2>印巴在克什米尔冲突 印军称摧毁巴方14个边防站</h2>
+                        <div class="news-form"><span>搜狐国际</span><span class="news-time">11-02</span></div>
+                    </a>
+                </div>
+                <div class="news-item">
+                    <a class="info-content"
+                       href="https://www.baidu.com/#iact=wiseindex%2Ftabs%2Fnews%2Factivity%2Fnewsdetail%3D%257B%2522linkData%2522%253A%257B%2522name%2522%253A%2522iframe%252Fmib-iframe%2522%252C%2522id%2522%253A%2522feed%2522%252C%2522index%2522%253A0%252C%2522url%2522%253A%2522https%253A%252F%252Fm.baidu.com%253Faction%253Dnewsdetail%2526nid%253D956542000750452865%2526n_type%253D0%2522%252C%2522title%2522%253A%2522%25E6%2596%25B0%25E6%25B5%25AA%25E4%25BD%2593%25E8%2582%25B2%2522%257D%257D">
+                        <div class="img-warp">
+                            <img src="images/news_3_1.JPEG"
+                                 alt="朴泰桓里约战绩差另有原因 韩政坛需要为此买单  "/>
+                        </div>
+                        <div class="info-form">
+                            <h2>朴泰桓里约战绩差另有原因 韩政坛需要为此买单 </h2>
+                            <div class="news-form"><span>大河网</span><span class="news-time">08:35</span></div>
+                        </div>
+                    </a>
+                </div>
+                <div class="refresh">
+                    <p>真的拉不出东西了~ <a href="#">点击刷新</a></p>
+                </div>
+            </div>
+        </section>
+    </article>
+    <footer>
+        <div class="footer">
+            <div class="footer-ads">
+                <p><i class="icon-hot-footer"></i>百度浏览器，上网速度提速200%</p>
+                <p><i class="icon-log-footer"></i>手机百度，6亿用户的极速搜索应用</p>
+                <p><i class="icon-hot-footer"></i>百度推广，让有需求的客户找到你</p>
+            </div>
+            <div class="footer-copyright">
+                <p><i class="icon-feedback"></i>用户反馈</p>
+                <p><a href="#">使用百度前必读</a> Baidu 京ICP证030173号</p>
+                <p><i class="icon-recordcode"></i>京公网安备110000020000001号</p>
+            </div>
+        </div>
+    </footer>
+</div>
+</body>
+</html>

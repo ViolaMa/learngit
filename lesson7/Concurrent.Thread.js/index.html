@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Concurrent.Thread.js</title>
+    <script src="js/Concurrent.Thread.js"></script>
+    <script>
+        /*Concurrent.Thread.create(function(){
+         var i = 0;
+         while(1){
+         document.body.innerHTML += i++ + "<br/>";
+         }
+         });*/
+
+        function f ( i ){
+            while ( 1 ) {
+                document.body.innerHTML += i++ + "<br>";
+            }
+        }
+        Concurrent.Thread.create(f, 0);
+        Concurrent.Thread.create(f, 100000);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

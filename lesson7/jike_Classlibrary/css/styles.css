@@ -1,0 +1,407 @@
+@charset "utf-8";
+
+/*css 初始化 */
+
+html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6,
+form, fieldset, legend, img {
+    margin: 0;
+    padding: 0;
+}
+
+fieldset, img, input, button {
+    border: none;
+    padding: 0;
+    margin: 0;
+    outline-style: none;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+input {
+    padding-top: 0;
+    padding-bottom: 0;
+    font-family: "SimSun", "宋体";
+}
+
+select, input {
+    vertical-align: middle;
+}
+
+select, input, textarea {
+    font-size: 12px;
+    margin: 0;
+}
+
+textarea {
+    resize: none;
+}
+
+img {
+    border: 0;
+    vertical-align: middle;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+body {
+    background-color: #f5f5f5;
+}
+
+blockquote, body, button, dd, dl, dt, fieldset, figure, form, h1, h2, h3, h4, h5, h6, input, legend, li, ol, p, pre, select, td, textarea, th, ul {
+    margin: 0;
+    padding: 0;
+    -moz-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: Verdana, "Lantinghei SC", "Hiragino Sans GB", "Microsoft Yahei", Helvetica, arial, \5b8b\4f53, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-decoration: none;
+    font-weight: normal;
+    font-family: 'Microsoft YaHei UI', "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin-bottom: 10px;
+}
+
+s, i, em {
+    font-style: normal;
+    text-decoration: none;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.clearfloat:after {
+    display: block;
+    clear: both;
+    content: "";
+    visibility: hidden;
+    height: 0;
+}
+
+.clearfloat {
+    zoom: 1;
+}
+
+.none {
+    display: none;
+}
+
+/*common*/
+a {
+    color: #222;
+    text-decoration: none;
+}
+
+.icon-arrow {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin-left: 5px;
+    border-left: 1px solid #cccccc;
+    border-top: 1px solid #cccccc;
+    transform: rotate(-135deg);
+}
+
+.arrow-down {
+}
+
+.arrow-down:hover {
+    animation: rotateUp 1s ease-in;
+    transform: rotate(405deg);
+    border-color: #35b558;
+}
+
+@keyframes rotateUp {
+    0% {
+        transform: rotate(45deg);
+    }
+    50% {
+        transform: rotate(405deg);
+    }
+}
+
+@-webkit-keyframes rotateUp {
+    0% {
+        -webkit-transform: rotate(45deg);
+    }
+    50% {
+        -webkit-transform: rotate(405deg);
+    }
+}
+
+@-moz-keyframes rotateUp {
+    0% {
+        -moz-transform: rotate(45deg);
+    }
+    50% {
+        -moz-transform: rotate(405deg);
+    }
+}
+
+/*导航*/
+.nav {
+    width: 100%;
+    background-color: #ffffff;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.nav .nav-content {
+    margin: 0 auto;
+    width: 1000px;
+    height: 60px;
+}
+
+.nav .nav-content .logo img {
+    width: auto;
+    height: 40px;
+    padding-top: 10px;
+}
+
+.nav .nav-content .menus {
+    margin-left: 60px;
+}
+
+.nav .nav-content .menus ul li {
+    position: relative;
+    font-size: 14px;
+    display: inline-block;
+    margin-right: 50px;
+    cursor: pointer;
+    height: 60px;
+    float: left;
+}
+
+.nav .nav-content .menus ul li a {
+    display: block;
+    line-height: 60px;
+    color: #35b558;
+}
+
+.sub-list-warp {
+    position: absolute;
+    margin-top: 1px;
+    width: 280px;
+    background-color: #ffffff;
+    padding-top: 10px;
+}
+
+.sub-list-warp dl dt {
+    background-color: #f4f4f4;
+}
+
+.nav .nav-content div.sub-list-warp dl dd a {
+    line-height: 30px;
+    display: block;
+}
+
+/*主要内容*/
+.container {
+    width: 1000px;
+    margin: 20px auto;
+}
+
+.breadcrumb {
+
+}
+
+/*左侧菜单*/
+.menu {
+    width: 210px;
+    background-color: #ffffff;
+    position: relative;
+}
+
+.menu ul li {
+    display: block;
+}
+
+.menu .menu-list {
+    padding: 10px;
+    line-height: 14px;
+    display: block;
+}
+
+.icon-menu {
+    position: relative;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+}
+
+.icon-video {
+    background-image: url("../images/icon-course-curr.png");
+    background-size: 15px;
+    background-repeat: no-repeat;
+}
+
+.icon-zylj {
+    background-image: url("../images/icon-zylj.png");
+    background-size: 15px;
+    background-repeat: no-repeat;
+}
+
+.icon-zstx {
+    background-image: url("../images/icon-zstx.png");
+    background-size: 15px;
+    background-repeat: no-repeat;
+}
+
+.icon-xlkc {
+    background-image: url("../images/icon-xlkc.png");
+    background-size: 15px;
+    background-repeat: no-repeat;
+}
+
+.icon-kcbq {
+    background-image: url("../images/icon-kcbq.png");
+    background-size: 15px;
+    background-repeat: no-repeat;
+}
+
+.menu .curr {
+    border: 1px solid #35b558;
+}
+
+.menu .curr a {
+    border-bottom: 1px solid #eeeeee;
+}
+.menu .on{
+    color: #35b558;
+}
+
+.menu .curr a.menu-list {
+    color: #35b558;
+    border-bottom: #dddddd 1px solid;
+}
+
+.menu .curr .menu-list-on {
+    color: #35b558;
+    border-right: 1px solid #ffffff;
+    width: 179px;
+    z-index: 999;
+    position: relative;
+    background-color: #fff;
+}
+
+.menu ul li ul li a {
+    padding-left: 30px;
+    font-size: 13px;
+    display: block;
+    line-height: 35px;
+    color: #333333;
+}
+
+.menu-list-sub {
+    position: absolute;
+    top:0px;
+    margin-left: 208px;
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    /*border-left: 1px solid #ffffff;*/
+    width: 405px;
+    min-height: 410px;
+    z-index: 1;
+    padding: 20px;
+    font-size: 12px;
+    box-sizing: border-box;
+}
+
+.menu-list-sub dl {
+    margin-top: 10px;
+}
+
+.menu-list-sub dl dt {
+    border-bottom: 1px solid #eeeeee;
+    margin-bottom: 5px;
+}
+
+.menu-list-sub dd {
+    display: inline-block;
+}
+
+.menu .menu-list-sub dl dd {
+
+}
+
+.menu .menu-list-sub dl dd a {
+    line-height: 14px;
+    padding: 5px 10px;
+    border-bottom: none;
+}
+
+.menu .menu-list-sub dl dd a:not(:last-child) {
+    border-right: 1px solid #eeeeee;
+}
+
+/*课程列表*/
+.class-library {
+    margin-left: 14px;
+    width: 776px;
+}
+
+.class-library .sub-menu {
+    height: 40px;
+    line-height: 40px;
+    background-color: #ffffff;
+}
+
+.class-library .sub-menu ul li {
+    display: inline-block;
+    padding: 0 20px;
+    font-size: 12px;
+}
+
+.class-library .sub-menu ul li:first-child {
+    border-right: 1px solid #eeeeee;
+}
+
+.class-library .sub-menu ul li .arrow-down:hover {
+    visibility: hidden;
+}
+
+.class-library .sub-menu ul li ul {
+    display: none;
+}
+
+.class-library .sub-menu .views {
+    float: right;
+    padding: 15px 10px;
+}
+
+.class-library .sub-menu .views a {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-repeat: no-repeat;
+}
+
+.pic-view {
+    background-image: url("../images/icon-kuai.png");
+    background-size: 15px 15px;
+}
+
+.class-library .sub-menu .list-view {
+    background-image: url("../images/icon-list.png");
+    background-size: 19px 14px;
+}
+
+.class-library .content {
+    margin-top: 20px;
+    background-color: #ffffff;
+}
+
+/*底部*/
+.footer {
+
+}

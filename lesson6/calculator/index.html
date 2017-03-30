@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>简易计算器</title>
+    <link rel="stylesheet" href="css/stylesheet.css" />
+    <script src="js/calculator.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="calculator">
+            <div class="screen">
+                <p id="screen"></p>
+            </div>
+            <div class="buttons">
+                <a href="#" id="clearBtn" name="operator" data-operator="C">C</a>
+                <a href="#" id="sinBtn" name="operator" data-operator="sin">sin</a>
+                <a href="#" id="cosBtn" name="operator" data-operator="cos" onclick="cosFunc()">cos</a>
+                <a href="#" name="operator" data-operator="+">+</a>
+                <a href="#" name="num" data-value="7">7</a>
+                <a href="#" name="num" data-value="8">8</a>
+                <a href="#" name="num" data-value="9">9</a>
+                <a href="#" name="operator" data-operator="-">-</a>
+                <a href="#" name="num" data-value="4">4</a>
+                <a href="#" name="num" data-value="5">5</a>
+                <a href="#" name="num" data-value="6">6</a>
+                <a href="#" name="operator" data-operator="*">*</a>
+                <a href="#" name="num" data-value="1">1</a>
+                <a href="#" name="num" data-value="2">2</a>
+                <a href="#" name="num" data-value="3">3</a>
+                <a href="#" name="operator" data-operator="/">/</a>
+                <a href="#" name="num" data-value="0">0</a>
+                <a href="#" name="num" data-value=".">.</a>
+                <a href="#" id="equalBtn" name="operator" class="equal" data-operator="=">=</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

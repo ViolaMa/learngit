@@ -1,0 +1,26 @@
+a:hover {
+    color: #ff9c00;
+}
+
+a:active {
+    color: #ff9c00;
+}
+
+.page-setup {
+    background-color: #ff9c00;
+}
+
+.container .nav {
+    border-top: 2px solid #ff9c00;
+}
+
+a.active {
+    background-color: #ff9c00;
+}
+.home-page .sub-nav {
+    border: 1px solid #ffa376;
+    border-top: none;
+}
+.right-side .links{
+    border: 1px solid #ffa376;
+}
