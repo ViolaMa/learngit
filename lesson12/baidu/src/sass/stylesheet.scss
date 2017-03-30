@@ -1,0 +1,725 @@
+@import "reset";
+
+$theme: #3076d5;
+$grey: #D5D5F5;
+$lightGrey: #f7f7f7;
+$white: #ffffff;
+$green: #42c505;
+$red: #ff0000;
+$fontSize: 12px;
+$baseLineHeight: 1.5 !default;
+$borderDirection: top !default;
+
+@mixin center-block {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin borderBox {
+  box-sizing: border-box;
+}
+
+@mixin opacity($opacity:50) {
+  opacity: $opacity/100;
+  filter: alpha(opacity=$opacity);
+}
+
+@mixin border($borderDirection, $borderColor:#ddd) {
+  border-#{$borderDirection}: 1px solid $borderColor;
+}
+
+@mixin fontStyle($direction, $fontSize, $color) {
+  text-align: $direction;
+  font-size: $fontSize;
+  color: $color;
+}
+
+/*宽度*/
+.width_190 {
+  width: 190px !important;
+}
+
+/*输入框*/
+.form_control {
+  width: 100%;
+  padding-left: 10px;
+  line-height: $baseLineHeight*2;
+  border: 1px solid #dddddd;
+  @include borderBox;
+}
+
+.form_control_with_icon {
+  padding-left: 30px;
+}
+
+/*按钮*/
+.btn {
+  padding: 3px 5px;
+  font-size: 16px;
+  line-height: $baseLineHeight*2;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  @include borderBox;
+  cursor: pointer;
+}
+
+.btn_default {
+  background-color: $theme;
+  color: $white;
+}
+
+.btn_default:hover {
+  background-color: #3076D5;
+}
+
+.btn-block {
+  width: 100%;
+  display: block;
+}
+
+/*图标icons*/
+.icons {
+  position: relative;
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+}
+
+.icons_big {
+  position: relative;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+}
+
+.arrow {
+  position: relative;
+  display: inline-block;
+  margin-right: 5px;
+  border-width: 4px;
+  border-style: solid;
+  border-color: #666666 #666666 transparent transparent;
+}
+
+.arrow-up {
+  transform: rotate(-45deg);
+}
+
+.arrow-down {
+  transform: rotate(135deg);
+}
+
+.white_arrow {
+  border-color: $white $white transparent transparent;
+}
+
+.close_icon {
+  background-image: url("../../app/images/pass_login_icons.png");
+  background-position: -54px -48px;
+  background-repeat: no-repeat;
+}
+
+.icon_across_big {
+  width: 28px;
+  height: 28px;
+  background-image: url("../../app/images/soutu_icons_sample.png");
+  background-position: -40px 0px;
+  background-repeat: no-repeat;
+}
+
+.upload_icon {
+  margin-right: 5px;
+  top: 3px;
+  background-image: url("../../app/images/soutu_icons_sample.png");
+  background-position: -144px 0px;
+  background-repeat: no-repeat;
+}
+
+.hide {
+  display: none;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.font-red {
+  color: $red;
+}
+
+.font-green {
+  color: $green;
+}
+
+.font-blue {
+  color: $theme;
+}
+
+header {
+  position: relative;
+  .header {
+    position: relative;
+    width: 100%;
+    margin: 0;
+    nav {
+      .nav {
+        overflow: hidden;
+        .nav_wrap {
+          margin-right: 85px;
+          height: 32px;
+          padding-top: 8px;
+          box-sizing: border-box;
+          .daily_info {
+            display: none;
+          }
+          ul {
+            li {
+              display: inline-block;
+              margin-right: 5px;
+              a {
+                text-decoration: underline;
+                font-weight: bold;
+                margin-right: 5px;
+                /*display: block;*/
+              }
+              a.thin {
+                font-weight: normal;
+              }
+            }
+          }
+          .menu {
+            ul {
+              li {
+                margin-right: 15px;
+              }
+            }
+          }
+        }
+        .has_logged_in {
+          @include border(bottom, #ddd);
+          ul {
+            li {
+              a {
+                color: #666666;
+              }
+            }
+          }
+          .daily_info {
+            position: absolute;
+            top: 5px;
+            padding-left: 10px;
+            display: block;
+            ul {
+              li {
+                a {
+                  text-decoration: none;
+                  .weather_cloudy {
+                    top: 4px;
+                    margin-left: 2px;
+                    margin-right: 5px;
+                    background-image: url("../../app/images/a1.png");
+                  }
+                  .air_quality {
+                    margin: 0 5px;
+                  }
+                }
+              }
+            }
+            .weather_wrap {
+              position: absolute;
+              margin-top: 5px;
+              width: 585px;
+              height: 205px;
+              border: 1px solid #dddddd;
+              border-top: none;
+              box-shadow: 0 1px 1px 1px #dddddd;
+              background-color: #ffffff;
+              z-index: 9;
+            }
+            .change_skin {
+              display: none;
+              position: fixed;
+              height: 310px;
+              top: -310px;
+              left: 0;
+              right: 0;
+              background-color: $white;
+              @include border(bottom);
+              box-shadow: 0 0 5px 5px #eeeeee;
+              z-index: 99;
+              .change_skin_main {
+                @include center-block;
+                width: 910px;
+                height: 310px;
+              }
+            }
+          }
+        }
+        .use_skin {
+          background-color: rgba(15, 25, 50, 0.3);
+          ul {
+            li {
+              a {
+                color: $white;
+              }
+            }
+          }
+        }
+      }
+    }
+    .more {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 85px;
+      .show_more {
+        position: absolute;
+        padding-top: 8px;
+        padding-bottom: 5px;
+        width: 85px;
+        background-color: $theme;
+        color: $white;
+        text-align: center;
+        z-index: 0;
+      }
+      .more_sub {
+        display: none;
+        background-color: #f9f9f9;
+        text-align: center;
+        z-index: 9;
+        dl {
+          dt {
+            @include border(bottom, #ddd);
+            line-height: $baseLineHeight *2;
+          }
+          dd {
+            padding-top: 10px;
+            a {
+              @include center-block;
+              @include border(bottom, #ddd);
+              display: block;
+              width: 66px;
+              height: 76px;
+              line-height: 1.5;
+              &:hover {
+                cursor: pointer;
+              }
+              p:hover {
+                @include border(bottom, #666);
+                /*margin-left: 20px;
+                margin-right: 20px;*/
+              }
+              .more_icon {
+                display: inline-block;
+                width: 36px;
+                height: 36px;
+                background-image: url("../../app/images/more.jpg");
+              }
+              .more_icon_music {
+                background-position: 0px 0px;
+              }
+              .more_icon_image {
+                background-position: 0px -35px;
+              }
+              .more_icon_zhidao {
+                background-position: 0px -71px;
+              }
+              .more_icon_wenku {
+                background-position: 0px -108px;
+              }
+              .more_icon_bang {
+                background-position: 0px -148px;
+              }
+              .more_icon_promote {
+                background-position: 0px -183px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+section {
+  position: relative;
+  .container {
+    .center_main {
+      @include center-block;
+      width: 895px;
+      .logo {
+        @include center-block;
+        width: 270px;
+        margin-top: 40px;
+        a {
+          .logo_image {
+            display: inline-block;
+            width: 270px;
+            height: 129px;
+            background-image: url("../../app/images/bd_logo1.png");
+            background-size: 270px 129px;
+          }
+        }
+      }
+      .search_wrap {
+        @include center-block;
+        @include borderBox;
+        width: 645px;
+        overflow: hidden;
+        .search_complex {
+          border: 1px solid #cccccc;
+          float: left;
+          width: 540px;
+          background-color: $white;
+          padding: 5px 6px 6px;
+          @include borderBox;
+          .search_input {
+            float: left;
+            width: 500px;
+            line-height: 1.8;
+          }
+          .image_search {
+            float: left;
+            position: absolute;
+            margin-top: 3px;
+            i {
+              background-image: url("../../app/images/camera_new.png");
+              background-image: -webkit-image-set(url(../../app/images/camera_new.png) 1x, url("../../app/images/camera_new_x2.png") 2x);
+              background-image: -moz-image-set(url(../../app/images/camera_new.png) 1x, url("../../app/images/camera_new_x2.png") 2x);
+              background-image: -o-image-set(url(../../app/images/camera_new.png) 1x, url("../../app/images/camera_new_x2.png") 2x);
+              background-image: -ms-image-set(url(../../app/images/camera_new.png) 1x, url("../../app/images/camera_new_x2.png") 2x);
+              background-repeat: no-repeat;
+              background-color: $white;
+              &:hover {
+                background-position: 0px -20px;
+                cursor: pointer;
+              }
+            }
+          }
+        }
+        .search_btn {
+          @include border($theme);
+          background-color: $theme;
+          color: $white;
+          float: left;
+          width: 100px;
+          height: 34px;
+          cursor: pointer;
+        }
+        .image_search_wrap {
+          position: absolute;
+          border: 1px solid $theme;
+          display: none;
+          .search_btn {
+
+          }
+          .camera_icon {
+            background-image: url("../../app/images/camera_layer.png");
+            background-image: -webkit-image-set(url(../../app/images/camera_layer.png) 1x, url("../../app/images/camera_layer_x2.png") 2x);
+            background-image: -moz-image-set(url(../../app/images/camera_layer.png) 1x, url("../../app/images/camera_layer_x2.png") 2x);
+            background-image: -o-image-set(url(../../app/images/camera_layer.png) 1x, url("../../app/images/camera_layer_x2.png") 2x);
+            background-image: -ms-image-set(url(../../app/images/camera_layer.png) 1x, url("../../app/images/camera_layer_x2.png") 2x);
+          }
+          .search_btn_tips {
+
+          }
+          .sub_div {
+            padding: 20px;
+            background-color: $white;
+            .image_search_drop {
+              @include center-block;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              width: 600px;
+              background-color: #f4f4f4;
+              height: 80px;
+              cursor: default;
+              .image_search_drop_tip {
+                display: block;
+                @include fontStyle(center, 14px, #aaa);
+              }
+            }
+            .upload_image_wrap {
+              margin-top: 20px;
+              text-align: center;
+              .upload_image {
+                width: 160px;
+                height: 45px;
+                border: 1px solid #cccccc;
+                background-color: $white;
+              }
+              .upload_image:hover {
+                border: 1px solid $theme;
+                cursor: pointer;
+              }
+              .close_btn {
+                position: absolute;
+                right: 10px;
+                bottom: 10px;
+              }
+            }
+          }
+        }
+      }
+      .personal_favor {
+        display: none;
+      }
+    }
+
+    .has_logged_in {
+      .search_wrap {
+        .search_btn {
+          background-color: $grey;
+        }
+      }
+      .personal_favor {
+        position: absolute;
+        margin-top: 70px;
+        width: 895px;
+        border: 1px solid #dddddd;
+        display: block;
+        .tab {
+          ul {
+            @include border(bottom, #ddd);
+            overflow: hidden;
+            li {
+              float: left;
+              a {
+                display: block;
+                padding: 10px 20px;
+                &:hover {
+                  background-color: rgba(0, 0, 0, 0.2);
+                }
+              }
+              &:first-child a {
+                padding-left: 45px;
+                .author_icon {
+                  position: absolute;
+                  top: 10px;
+                  left: 25px;
+                  background-image: url("../../app/images/card_setts_fdb.png");
+                  background-position: -17px 0px;
+                  background-repeat: no-repeat;
+                }
+              }
+            }
+          }
+        }
+        .tab_content {
+          min-height: 200px;
+          padding: 20px;
+          .tab_div {
+            display: none;
+            .mini-title {
+              i.arrow-down {
+                top: -3px;
+              }
+            }
+          }
+          .active {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}
+
+footer {
+  width: 100%;
+  position: absolute;
+  bottom: 47px;
+  .footer {
+    @include center-block;
+    position: relative;
+    width: 635px;
+    height: 120px;
+    text-align: center;
+    overflow: hidden;
+    p {
+      color: #878787;
+      a {
+        color: #878787;
+        text-decoration: underline;
+      }
+    }
+
+    .qr_code_wrap {
+      /*position: absolute;*/
+      bottom: 80px;
+      display: inline-block;
+      width: 60px;
+      height: 60px;
+      .qr_code {
+        display: inline-block;
+        width: 60px;
+        height: 60px;
+        background-image: url("../../app/images/zbios.png");
+        background-repeat: no-repeat;
+      }
+    }
+    .common_info_wrap {
+      margin-top: 20px;
+      text-align: center;
+      .company_info {
+        a {
+          &:not(:last-child) {
+            margin-right: 30px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.login_popup {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.45);
+  display: none;
+  .login_container {
+    position: absolute;
+    @include center-block;
+    width: 390px;
+    height: 480px;
+    background-color: $white;
+    overflow: hidden;
+    .title_bg_grey {
+      position: relative;
+      height: 48px;
+      padding-left: 20px;
+      background-color: $lightGrey;
+      font-size: 16px;
+      line-height: $baseLineHeight*2;
+      .mini_baidu {
+        position: relative;
+        margin-right: 5px;
+        top: 7px;
+        width: 24px;
+        height: 32px;
+        background-image: url("../../app/images/baidu_logo_mini.png");
+      }
+      .close_btn {
+        position: absolute;
+        right: 10px;
+        top: 5px;
+      }
+    }
+    .login_content {
+      .login_normal {
+        .form_wrap {
+          position: relative;
+          /*overflow: hidden;*/
+          margin: 15px 20px;
+          .login_info {
+            color: $red;
+          }
+          .form_wrap_right {
+            float: right;
+            /*position: absolute;*/
+            right: 10px;
+            .phone_icon {
+              top: 3px;
+              background-image: url("../../app/images/smsSwitchPhone.png");
+              background-repeat: no-repeat;
+              background-position: 2px 3px;
+            }
+          }
+          .icon_wrap {
+            position: absolute;
+            left: 5px;
+            top: 10px;
+            .avatar_icon {
+              background-image: url("../../app/images/input_icons_24.png");
+              background-repeat: no-repeat;
+              background-position: -4px -71px;
+            }
+            .password_icon {
+              background-image: url("../../app/images/input_icons_24.png");
+              background-repeat: no-repeat;
+              background-position: -4px -150px;
+            }
+          }
+          .comfirm_code {
+            display: inline-block;
+            width: 100px;
+            height: 36px;
+            border: 1px solid #dddddd;
+            img {
+              height: 36px;
+            }
+          }
+        }
+        .active {
+          .form_control {
+            border-color: $theme;
+          }
+          .icon_wrap {
+            .avatar_icon {
+              background-image: url("../../app/images/input_icons_24.png");
+              background-repeat: no-repeat;
+              background-position: -4px -112px;
+            }
+            .password_icon {
+              background-image: url("../../app/images/input_icons_24.png");
+              background-repeat: no-repeat;
+              background-position: -4px -190px;
+            }
+          }
+        }
+        .login_others {
+          margin-top: 40px;
+          border-top: 1px solid #ddd;
+          padding-top: 10px;
+          padding-left: 20px;
+          p {
+            line-height: $baseLineHeight*2;
+          }
+          .icon_qq {
+            background-image: url("../../app/images/pass_login_icons.png");
+            background-position: -90px 0px;
+            background-repeat: no-repeat;
+            margin-right: 10px;
+          }
+          .icon_webo {
+            background-image: url("../../app/images/pass_login_icons.png");
+            background-position: -63px 0px;
+            background-repeat: no-repeat;
+          }
+        }
+      }
+      .login_qr_code {
+
+      }
+      .change_login_type {
+        position: absolute;
+        right: 0px;
+        bottom: 0px;
+        height: 40px;
+        a {
+          i {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background-image: url("../../app/images/pass_login_icons.png");
+            background-repeat: no-repeat;
+          }
+          .icon_cpt {
+            background-position: 0px -88px;
+          }
+          .icon_qrcode {
+            background-position: -50px -88px;
+          }
+        }
+
+      }
+    }
+  }
+}
+
+

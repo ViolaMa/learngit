@@ -1,0 +1,213 @@
+html {
+    height: 100%;
+    font-size: 62.5%; /*1rem = 10px;*/
+    font-family: Arial;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+a, i, cite, em, var, address, dfn {
+    font-style: normal;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/*reset*/
+.container {
+    width: 100%;
+    height: 100%;
+}
+
+header {
+    background-color: #3e98f0;
+    background-image: url("../images/bg-news-logo.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 6rem;
+}
+
+header a {
+    display: block;
+    height: 4.8rem;
+    line-height: 4.8rem;
+    color: #ffffff;
+    margin: 0 1rem;
+}
+
+header a:nth-child(1),
+header a:nth-child(2) {
+    float: left;
+}
+
+header a:nth-child(3),
+header a:nth-child(4) {
+    float: right;
+}
+
+header a .iconfont {
+    font-size: 2rem;
+}
+
+nav {
+    background-color: #3e98f0;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    font-size: 1.44rem;
+    text-align: center;
+    width: 16.6%;
+}
+
+nav a {
+    display: inline-block;
+    padding: 1rem 0;
+    color: #ffffff;
+}
+
+nav ul i {
+    display: inline-block;
+    height: 2rem;
+    float: right;
+    border-right: 1px solid #5dabf0;
+    position: relative;
+    top: 1.1rem;
+}
+
+nav a.active {
+    border-bottom: 2px solid #ffffff;
+}
+
+.banner {
+    position: relative;
+    margin: 1.8rem 0 0 0;
+    width:100%;
+    height: 17.5rem;
+    overflow: hidden;
+}
+
+.banner ul {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+}
+
+.banner ul li {
+    padding: 0;
+    list-style: none;
+    /*display: none;*/
+    float: left;
+}
+
+.banner ul li.active {
+    /*display: block;*/
+}
+.banner .banner-content{
+    height: 17.5rem;
+    overflow: hidden;
+}
+.banner .banner-content img{
+    width: 100%;
+}
+.banner .banner-content p {
+    position: absolute;
+    bottom: 0;
+    margin: 0;
+    padding: 0 0 0 1rem;
+    width: 100%;
+    background: url("../images/banner_bg.png");
+    line-height: 3rem;
+    color: #ffffff;
+    font-size: 1.6rem;
+    box-sizing: border-box;
+}
+
+.banner ol {
+    position: absolute;
+    right: 1rem;
+    bottom: 0.8rem;
+    font-size: 0;
+    overflow: hidden;
+}
+
+.banner ol li {
+    display: inline-block;
+    width: 0.8rem;
+    height: 0.8rem;
+    background-color: #ffffff;
+    margin: 0.2rem;
+    border-radius: 0.4rem;
+}
+.banner ol li.active{
+    background-color: #5dabf0;
+}
+.news-main {
+    position: relative;
+    padding: 0 1.8rem;
+}
+
+article .news-lists {
+    margin: 1rem 0 0 0;
+    padding: 0;
+    list-style: none;
+    font-size: 1.3rem;
+}
+
+.news-list {
+    display: flex;
+    border-bottom: 1px solid #eeeeee;
+    padding: 1rem 0;
+}
+
+.news-list .newsimg {
+    flex: 1;
+}
+.news-list .newsimg img{
+    width: 100%;
+}
+.news-list .newscontent {
+    flex: 2;
+    padding: 0 0 0 0.5rem;
+}
+
+.news-list .newscontent h1 {
+    position: relative;
+    margin: 0;
+    font-size: 1.8rem;
+    min-height:4rem;
+
+}
+
+.news-list .newscontent p {
+    margin: .8rem 0;
+}
+
+.newstime {
+    color: #666666;
+}
+
+.newssrc {
+    color: #666666;
+    float: right;
+}
+

@@ -1,0 +1,10 @@
+<?php
+header("Content-type:application/json; charset = utf-8");
+$con = mysql_connect("localhost","root","");
+
+if(!$con){
+    die("Could not connect:".mysql_error());
+}
+mysql_select_db('news',$con);
+mysql_query("set names utf8");
+?>

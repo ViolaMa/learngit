@@ -201,6 +201,7 @@ var/
 sdist/
 develop-eggs/
 font/
+node_modules/
 .installed.cfg
 
 # Installer logs
@@ -215,3 +216,5 @@ pip-log.txt
 
 #Mr Developer
 .mr.developer.cfg
+lesson11/jike_index/node_modules/.bin/browserslist
+*.cmd

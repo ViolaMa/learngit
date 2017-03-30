@@ -1,0 +1,818 @@
+@import "reset";
+
+@mixin center-block($width:0px) {
+  margin-top: $width;
+  margin-bottom: $width;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin position($pos:absolute) {
+  position: $pos;
+}
+
+$theme: #35B558;
+$grey: #999999;
+$white: #ffffff;
+
+/*UI kit*/
+button {
+  width: 120px;
+  height: 32px;
+  border: 1px solid $theme;
+  border-radius: 2px;
+  background-color: $white;
+  color: $theme;
+  margin-top: 25px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: $theme;
+  color: $white;
+  animation: button ease-in 1s;
+}
+
+.icon-arrow {
+  width: 8px;
+  height: 8px;
+  display: inline-block;
+  border-left: 1px solid #c1c1c1;
+  border-top: 1px solid #c1c1c1;
+  transform: rotate(-135deg);
+}
+
+.icon-arrow:hover {
+  transform: rotate(45deg);
+  animation: rotate ease-in 0.5s;
+}
+
+.phone-icon {
+  width: 17px;
+  height: 17px;
+  display: inline-block;
+  background-image: url("../images/app-icon.png");
+  background-repeat: no-repeat;
+  background-position: 0px 0px;
+  background-size: 17px 17px;
+}
+
+.login-icon {
+  width: 17px;
+  height: 17px;
+  display: inline-block;
+  background-image: url("../images/login-icon.png");
+  background-repeat: no-repeat;
+  background-position: 0px 0px;
+  background-size: 17px 17px;
+}
+
+.search-icon {
+  width: 17px;
+  height: 17px;
+  display: inline-block;
+  background-image: url("../images/search-icon.png");
+  background-repeat: no-repeat;
+  background-position: 0px 0px;
+  background-size: 17px 17px;
+}
+
+.close-icon {
+  float: right;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background: url("../images/close-icon.png");
+  background-size: 15px 15px;
+  margin-right: 10px;
+}
+
+.arrow-bottom {
+  @include position(absolute);
+  display: inline-block;
+  content: '';
+  width: 0;
+  height: 0;
+  border-top: 10px solid $white;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  bottom: -10px;
+  left: 47px;
+}
+
+/*动画*/
+@-webkit-keyframes rotate {
+  0% {
+    transform: rotate(-135deg);
+  }
+  50% {
+    transform: rotate(45deg);
+  }
+}
+
+@-webkit-keyframes left {
+  0% {
+    -webkit-transform: scalex(0.5);
+    -webkit-transform-origin: right center;
+  }
+  50% {
+    -webkit-transform: scalex(1);
+    -webkit-transform-origin: right center;
+  }
+}
+
+@keyframes left {
+  0% {
+    transform: scalex(0.5);
+    transform-origin: right center;
+  }
+  50% {
+    transform: scalex(1);
+    transform-origin: right center;
+  }
+}
+
+@-webkit-keyframes opacity {
+  0% {
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+}
+
+@-moz-keyframes opacity {
+  0% {
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+}
+
+@-webkit-keyframes button {
+  0% {
+    background-color: $white;
+    color: $theme;
+  }
+  50% {
+    background-color: $theme;
+    color: $white;
+  }
+}
+
+/*页面顶部*/
+.header {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 60px;
+  background-color: $white;
+  border-bottom: 1px solid #ececec;
+  .header-warp {
+    @include center-block(0);
+    @include position(relative);
+    width: 1000px;
+    overflow: hidden;
+    div {
+      display: inline-block;
+    }
+    .logo {
+      padding-top: 10px;
+      margin-right: 60px;
+      img {
+        width: auto;
+        height: 40px;
+      }
+    }
+    ul li {
+      @include position(relative);
+      display: inline-block;
+      font-size: 14px;
+    }
+    .nav {
+      ul li:not(:last-child) {
+        margin-right: 60px;
+      }
+      .active {
+        color: $theme;
+      }
+    }
+    .search-warp {
+      @include position(absolute);
+      left: -700px;
+      top: 0px;
+      width: 840px;
+      height: 60px;
+      background: $white;
+      padding-top: 20px;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      -webkit-animation: left 2s ease-in;
+      animation: left 2s ease-in;
+      display: none;
+      .search-input {
+        @include position(relative);
+        margin-top: -10px;
+        margin-left: 5px;
+      }
+      .hot {
+        float: right;
+        margin-right: 30px;
+        a {
+          margin: 0 10px;
+          background-color: #eeeeee;
+          padding: 4px 4px;
+        }
+      }
+    }
+  }
+}
+
+.icon-box {
+  @include position(absolute);
+  top: 0px;
+  right: 10px;
+  ul li {
+    margin-left: 25px;
+    a {
+      display: block;
+      line-height: 60px;
+    }
+  }
+}
+
+/*页面主要内容*/
+.container {
+  @include center-block(20px);
+  width: 1000px;
+  section {
+    margin-top: 20px;
+    .banner-warp {
+      .banner {
+        @include position(relative);
+        float: left;
+        width: 750px;
+        height: 330px;
+        overflow: hidden;
+        ul {
+          @include position(absolute);
+          /*width: 4500px;*/
+          height: 330px;
+          overflow: hidden;
+          li {
+            width: 750px;
+            float: left;
+          }
+
+        }
+        .banner-ol {
+          @include position(absolute);
+          z-index: 9;
+          left: 50%;
+          margin-left: -46px;
+          bottom: 20px;
+          li {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background: $white;
+            margin-right: 5px;
+          }
+          li.active {
+            height: 20px;
+            background-color: $theme;
+          }
+        }
+        .arrow {
+          height: 330px;
+          width: 750px;
+          div {
+            @include position(absolute);
+            width: 50px;
+            height: 100px;
+            background-color: #000;
+            margin-top: 120px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            box-sizing: border-box;
+            opacity: 0.3;
+            filter: alpha(opacity=30);
+          }
+          span {
+            @include position(relative);
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            border-left: 3px solid $white;
+            border-top: 3px solid $white;
+          }
+        }
+        .left-arrow {
+          float: left;
+          padding-left: 20px;
+          cursor: pointer;
+          span {
+            transform: rotate(-45deg);
+          }
+        }
+        .right-arrow {
+          right: 0px;
+          float: right;
+          cursor: pointer;
+          span {
+            transform: rotate(135deg);
+          }
+        }
+      }
+    }
+    .login-warp {
+      width: 240px;
+      height: 160px;
+      background-color: $white;
+      float: right;
+      border: 1px solid #ececec;
+      box-sizing: border-box;
+      padding: 20px;
+      .login {
+        @include position(relative);
+        img {
+          width: 57px;
+          height: 57px;
+          display: inline-block;
+        }
+        p {
+          @include position(relative);
+          display: inline-block;
+          margin-left: 10px;
+          line-height: 25px;
+          top: 15px;
+        }
+      }
+      .login-btn button {
+        width: auto;
+        width: 85px;
+        height: 32px;
+        margin-right: 10px;
+      }
+    }
+    .banner-ads {
+      float: right;
+      margin-top: 10px;
+      width: 240px;
+      height: 160px;
+      a {
+        width: 100%;
+        height: 100%;
+        background: url("../images/ads_1.jpg") no-repeat;
+        display: block;
+      }
+    }
+    .guidance {
+      ul {
+        display: -webkit-flex;
+        display: flex;
+        li {
+          @include position(relative);
+          flex: 1;
+          width: 200px;
+          background-color: $white;
+          border: 1px solid #ececec;
+          text-align: center;
+          padding: 20px;
+          a {
+            color: #333333;
+            &:hover {
+              color: $theme;
+            }
+            img {
+              width: 130px;
+            }
+          }
+        }
+        li:not(:first-child) {
+          border-left: none;
+        }
+        li.tar-guidance {
+          @include position(absolute);
+          top: 0;
+          left: 0;
+          width: 52px;
+          height: 52px;
+          display: inline-block;
+          background-image: url("../images/tag_guidance.png");
+          background-repeat: no-repeat;
+          background-size: 52px;
+        }
+      }
+    }
+    .courses ul {
+      display: -webkit-flex;
+      display: flex;
+      li {
+        -webkit-flex: 1;
+        flex: 1;
+        background-color: $white;
+        border: 1px solid #ececec;
+        &:hover {
+          box-shadow: 0 0 3px 3px #eeeeee;
+        }
+        &:not(:last-child) {
+          margin-right: 20px;
+          padding-bottom: 20px;
+        }
+        a {
+          img {
+            width: 233px;
+          }
+          .info {
+            @include position(relative);
+            padding: 15px 20px;
+            box-sizing: border-box;
+            p {
+              line-height: 18px;
+              &:first-child {
+                height: 36px;
+              }
+            }
+            .course-price {
+              float: left;
+              font-size: 18px;
+              color: #ff5c00;
+              vertical-align: bottom;
+              margin-right: 5px;
+              margin-top: 8px;
+            }
+            .course-original-price {
+              @include position(absolute);
+              float: left;
+              color: $grey;
+              margin-top: 14px;
+              text-decoration: line-through;
+              vertical-align: bottom;
+              margin-top: 10px;
+            }
+            .num {
+              display: inline-block;
+              height: 14px;
+              @include position(absolute);
+              bottom: -10px;
+              right: 14px;
+              color: $grey;
+            }
+          }
+        }
+      }
+    }
+
+    .professional-school {
+      h2 {
+        line-height: 50px;
+      }
+      .category {
+        ul li {
+          @include position(relative);
+          display: inline-block;
+          float: left;
+          height: 130px;
+          width: 240px;
+          overflow: hidden;
+          &:first-child {
+            width: 500px;
+            height: 270px;
+          }
+          &:not(:first-child) {
+            margin-left: 10px;
+            margin-bottom: 10px;
+            img {
+              width: 240px;
+            }
+          }
+          a {
+            i {
+              @include position(absolute);
+              width: 240px;
+              height: 130px;
+              left: 0;
+              top: 0;
+              background-color: #000000;
+              opacity: 0.1;
+              filter: alpha(opacity=10);
+              display: block;
+              z-index: 9;
+              &:hover {
+                opacity: 0.3;
+                filter: alpha(opacity=30);
+                animation: opacity 1s 1;
+              }
+            }
+            p {
+              @include position(relative);
+              text-align: center;
+              color: $white;
+              top: -165px;
+              font-size: 14px;
+              padding-top: 120px;
+            }
+          }
+          .web {
+            img {
+              width: 500px;
+            }
+            i {
+              width: 500px;
+              height: 270px;
+            }
+            p {
+              top: -265px;
+              font-size: 20px;
+              background: url("../images/cweb.png") no-repeat center 70px;
+              padding-top: 180px;
+              background-size: 55px 84px;
+            }
+          }
+          .python p {
+            background-images: url("../images/cpython.png") no-repeat center 70px;
+            background-size: 36px 36px;
+          }
+          .go p {
+            background-image: url("../images/cgo.png") no-repeat center 70px;
+            background-size: 36px 36px;
+          }
+          .ios p {
+            background-image: url("../images/cios.png") no-repeat center 70px;
+            background-size: 36px 36px;
+          }
+          .more p {
+            background-image: url("../images/cmore.png") no-repeat center 70px;
+            background-size: 36px 36px;
+          }
+
+        }
+      }
+      .member {
+        ul li {
+          display: inline-block;
+          width: 158px;
+          height: 148px;
+          margin-left: -3px;
+          margin-right: 9px;
+          margin-bottom: 10px;
+          background-color: $white;
+          text-align: center;
+          border: 1px solid #ececec;
+          box-sizing: border-box;
+          &:hover {
+            box-shadow: 0 0 4px 4px #eeeeee;
+          }
+          a {
+            img {
+              width: 55px;
+              height: 55px;
+              display: inline-block;
+              margin-top: 25px;
+            }
+            p:last-child {
+              color: $theme;
+            }
+          }
+        }
+        .all-menbers {
+          text-align: center;
+        }
+      }
+    }
+
+    .students {
+      h2 {
+        line-height: 50px;
+      }
+      .students-stories {
+        .story {
+          display: inline-block;
+          width: 310px;
+          box-sizing: border-box;
+          margin-right: 20px;
+          margin-left: -3px;
+          .detail {
+            @include position(relative);
+            border: 1px solid #ececec;
+            padding: 20px;
+            background-color: $white;
+            &:before {
+              @include position(absolute);
+              content: '';
+              display: inline-block;
+              width: 0;
+              height: 0;
+              border-top: 10px solid $white;
+              border-left: 5px solid transparent;
+              border-right: 5px solid transparent;
+              bottom: -10px;
+              left: 47px;
+            }
+            p {
+              &:before {
+                @include position(absolute);
+                content: '';
+                display: inline-block;
+                width: 14px;
+                height: 10px;
+                background: url(../images/storyicon.png) no-repeat center;
+                background-size: 14px 10px;
+                top: 10px;
+                left: 10px;
+              }
+              &:after {
+                @include position(absolute);
+                content: '';
+                display: inline-block;
+                width: 14px;
+                height: 10px;
+                background: url(../images/storyicon.png) no-repeat center;
+                background-size: 14px 10px;
+                right: 10px;
+                bottom: 10px;
+                transform: rotate(180deg);
+                -ms-transform: rotate(180deg);
+                -webkit-transform: rotate(180deg);
+                -o-transform: rotate(180deg);
+                -moz-transform: rotate(180deg);
+              }
+            }
+          }
+          .personal-info {
+            margin-top: 20px;
+            div {
+              @include position(relative);
+              display: inline-block;
+              margin-left: 10px;
+              margin-top: 10px;
+            }
+            img {
+              display: inline-block;
+              height: 60px;
+              width: 60px;
+              border-radius: 50%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/*footer*/
+.footer {
+  width: 100%;
+  background-color: $white;
+  border-top: 1px solid #ececec;
+  .footer-warp {
+    width: 1000px;
+    height: 300px;
+    margin: 0 auto;
+    padding-top: 20px;
+    .logo {
+      float: left;
+      display: inline-block;
+      margin-right: 45px;
+      img {
+        width: 109px;
+        margin-bottom: 20px;
+      }
+    }
+    .category {
+      display: -webkit-flex;
+      display: flex;
+      float: left;
+      width: 600px;
+      dl {
+        -webkit-flex: 1;
+        flex: 1;
+        line-height: 30px;
+        color: $grey;
+        dt {
+          font-size: 14px;
+          color: #666666;
+        }
+        dd {
+          a {
+            color: $grey;
+          }
+        }
+      }
+    }
+    .tel {
+      display: inline-block;
+      p {
+        font-size: 14px;
+        line-height: 30px;
+      }
+      .download {
+        @include position(relative);
+        height: 30px;
+        width: 140px;
+        box-sizing: border-box;
+        border: 1px solid #ececec;
+        line-height: 25px;
+        margin-bottom: 10px;
+        p {
+          @include position(relative);
+          display: inline-block;
+          top: -10px;
+          left: 10px;
+        }
+        span {
+          display: inline-block;
+          width: 30px;
+          height: 30px;
+        }
+      }
+      .down-iPhone span {
+        background: url("../images/icon-down-ios.png") no-repeat;
+        background-size: 30px 30px;
+      }
+
+      .down-android span {
+        background: url("../images/icon-down-and.png") no-repeat;
+        background-size: 30px 30px;
+      }
+    }
+    .copyright {
+      display: block;
+      border-top: 1px solid #ececec;
+      margin-top: 100px;
+      p {
+        text-align: center;
+        margin-top: 10px;
+        line-height: 25px;
+        img {
+          width: 60px;
+          height: 22px;
+        }
+      }
+      .grey span a {
+        display: inline-block;
+        width: 20px;
+        height: 15px;
+        margin-right: 10px;
+        .weibo {
+          background: url("../images/icon-down-sina.png") no-repeat;
+          background-size: 20px 15px;
+        }
+        .wechat {
+          background: url("../images/icon-down-wechat.png") no-repeat;
+          background-size: 20px 15px;
+        }
+      }
+    }
+  }
+}
+
+address {
+  .scroll {
+    @include position(fixed);
+    left: 50%;
+    margin-left: 510px;
+    bottom: 50px;
+    width: 34px;
+    .scroll-top {
+      display: block;
+      width: 34px;
+      height: 34px;
+      background: url("../images/gotop.jpg") no-repeat top center;
+      background-size: 34px 103px;
+    }
+    .phone {
+      @include position(relative);
+      display: block;
+      background: #f7f7f7 url(../images/phone-1.png) center center no-repeat;
+      background-size: 12px 24px;
+      width: 34px;
+      height: 35px;
+      border-bottom: 1px solid #e0e0e0;
+    }
+    .wechat {
+      @include position(relative);
+      display: block;
+      background: #f7f7f7 url(../images/wechat.jpg) center center no-repeat;
+      background-size: 34px 35px;
+      width: 34px;
+      height: 35px;
+      border-bottom: 1px solid #e0e0e0;
+    }
+  }
+}
+

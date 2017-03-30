@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=320,maximum-scale=1,user-scalable=no">
+    <title>高级前端面试题总结</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/stylesheet.css"/>
+</head>
+<body>
+<div class="container-fluid limit">
+    <div class="row">
+        <div class="col-md-3">
+            <div class="menu">
+                <ul class="nav nav-pills nav-stacked" role="tablist">
+                    <li role="presentation" class="active"><a href="#html">html</a></li>
+                    <li role="presentation"><a href="#css">CSS</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-9">
+            <div id="html">
+                <div class="page-header">
+                    <h1>Example page header
+                        <small>Subtext for header</small>
+                    </h1>
+                </div>
+                <div class="panel panel-success">
+                    <div class="panel-heading">1 . XHTML和HTML有什么区别</div>
+                    <div class="panel-body">
+                        <p>HTML是一种基本的WEB网页设计语言，XHTML是一个基于XML的置标语言
+                            最主要的不同：</p>
+                        <p>XHTML 元素必须被正确地嵌套。</p>
+                        <p>XHTML 元素必须被关闭。</p>
+                        <p>标签名必须用小写字母。</p>
+                        <p>XHTML 文档必须拥有根元素。</p>
+                    </div>
+                </div>
+                <div class="panel panel-success">
+                    <div class="panel-heading">2. 前端页面有哪三层构成，分别是什么?作用是什么?</div>
+                    <div class="panel-body">
+                        <p>结构层 Html 表示层 CSS 行为层 js。</p>
+                    </div>
+                </div>
+                <div class="panel panel-success">
+                    <div class="panel-heading">3. 你做的页面在哪些流览器测试过?这些浏览器的内核分别是什么?</div>
+                    <div class="panel-body">
+                        <p>Ie(Ie内核) 火狐（Gecko） 谷歌（webkit,Blink） opera(Presto),Safari(wbkit)</p>
+                    </div>
+                </div>
+                <div class="panel panel-success">
+                    <div class="panel-heading">4. 什么是语义化的HTML?</div>
+                    <div class="panel-body">
+                        <p>直观的认识标签 对于搜索引擎的抓取有好处，用正确的标签做正确的事情！</p>
+                        <p>html语义化就是让页面的内容结构化，便于对浏览器、搜索引擎解析；
+                            在没有样式CCS情况下也以一种文档格式显示，并且是容易阅读的。搜索引擎的爬虫依赖于标记来确定上下文和各个关键字的权重，利于 SEO。</p>
+                        <p>使阅读源代码的人对网站更容易将网站分块，便于阅读维护理解。</p>
+                    </div>
+                </div>
+                <div class="panel panel-success">
+                    <div class="panel-heading">5. HTML5 为什么只需要写 !DOCTYPE HTML？</div>
+                    <div class="panel-body">
+                        <p>
+                            HTML5不基于SGML，因此不需要对DTD进行引用，但是需要doctype来规范浏览器的行为（让浏览器按照它们应该的方式来运行）；
+                            而HTML4.01基于SGML,所以需要对DTD进行引用，才能告知浏览器文档所使用的文档类型。</p>
+                    </div>
+                </div>
+                <div class="panel panel-success">
+                    <div class="panel-heading">6. Doctype作用？标准模式与兼容模式各有什么区别?</div>
+                    <div class="panel-body">
+                        <p>!DOCTYPE声明位于位于HTML文档中的第一行，处于html
+                            标签之前。告知浏览器的解析器用什么文档标准解析这个文档。DOCTYPE不存在或格式不正确会导致文档以兼容模式呈现。</p>
+                        <p>标准模式的排版 和JS运作模式都是以该浏览器支持的最高标准运行。在兼容模式中，页面以宽松的向后兼容的方式显示,模拟老式浏览器的行为以防止站点无法工作。</p>
+                    </div>
+                </div>
+                <div class="panel panel-success">
+                    <div class="panel-heading">7. html5有哪些新特性、移除了那些元素？如何处理HTML5新标签的浏览器兼容问题？如何区分 HTML 和 HTML5？</div>
+                    <div class="panel-body">
+                        <p>HTML5 现在已经不是 SGML 的子集，主要是关于图像，位置，存储，多任务等功能的增加。</p>
+                        <p>绘画 canvas </p>
+                        <p>用于媒介回放的 video 和 audio 元素</p>
+                        <p>本地离线存储 localStorage 长期存储数据，浏览器关闭后数据不丢失；</p>
+                        <p>sessionStorage 的数据在浏览器关闭后自动删除</p>
+                        <p>语意化更好的内容元素，比如 article、footer、header、nav、section</p>
+                        <p>表单控件，calendar、date、time、email、url、search</p>
+                        <p>新的技术webworker, websockt, Geolocation</p>
+                        <p><strong>移除的元素</strong> :<br/>
+                            纯表现的元素：basefont，big，center，font, s，strike，tt，u；<br/>
+                            对可用性产生负面影响的元素：frame，frameset，noframes；</p>
+                        <p><strong>支持HTML5新标签：</strong><br/>
+                            IE8/IE7/IE6支持通过document.createElement方法产生的标签，
+                            可以利用这一特性让这些浏览器支持HTML5新标签，
+                            浏览器支持新标签后，还需要添加标签默认的样式：
+                        </p>
+                    </div>
+                </div>
+                <div class="panel panel-success">
+                    <div class="panel-heading">8. 请描述一下 cookies，sessionStorage 和 localStorage 的区别？</div>
+                    <div class="panel-body">
+                        <p>cookie在浏览器和服务器间来回传递。 sessionStorage和localStorage不会</p>
+                        <p>sessionStorage和localStorage的存储空间更大；</p>
+                        <p>sessionStorage和localStorage有更多丰富易用的接口；</p>
+                        <p>sessionStorage和localStorage各自独立的存储空间；</p>
+                    </div>
+                </div>
+                <div class="panel panel-success">
+                    <div class="panel-heading">9. 如何实现浏览器内多个标签页之间的通信?</div>
+                    <div class="panel-body">
+                        <p>调用localstorge、cookies等本地存储方式</p>
+                    </div>
+                </div>
+            </div>
+            <div id="css">
+                <div class="page-header">
+                    <h1>Example page header
+                        <small>Subtext for header</small>
+                    </h1>
+                </div>
+                <div class="panel panel-success">
+                    <div class="panel-heading">1. 简要说一下CSS的元素分类</div>
+                    <div class="panel-body">
+                        <p> 块级元素：div,p,h1,form,ul,li;</p>
+                        <p>行内元素 : span>,a,label,input,img,strong,em;</p>
+                    </div>
+                </div>
+                <div class="panel panel-success">
+                    <div class="panel-heading">2. CSS隐藏元素的几种方法（至少说出三种）</div>
+                    <div class="panel-body">
+                        <p> Opacity:元素本身依然占据它自己的位置并对网页的布局起作用。它也将响应用户交互;</p>
+                        <p> Visibility:与 opacity 唯一不同的是它不会响应任何用户交互。此外，元素在读屏软件中也会被隐藏;</p>
+                        <p>Display:display 设为 none 任何对该元素直接打用户交互操作都不可能生效。此外，读屏软件也不会读到元素的内容。这种方式产生的效果就像元素完全不存在;</p>
+                        <p>Position:不会影响布局，能让元素保持可以操作;</p>
+                        <p>Clip-path:clip-path 属性还没有在 IE 或者 Edge 下被完全支持。如果要在你的 clip-path 中使用外部的 SVG 文件，浏览器支持度还要低;</p>
+                    </div>
+                </div>
+                <div class="panel panel-success">
+                    <div class="panel-heading">3. CSS清除浮动的几种方法（至少两种）</div>
+                    <div class="panel-body">
+                        <p>使用带clear属性的空元素</p>
+                        <p>使用CSS的overflow属性；</p>
+                        <p>使用CSS的:after伪元素；</p>
+                        <p>使用邻接元素处理；</p>
+                    </div>
+                </div>
+                <div class="panel panel-success">
+                    <div class="panel-heading">4. CSS居中（包括水平居中和垂直居中）</div>
+                    <div class="panel-body">
+                        <h4><strong>内联元素居中方案</strong></h4>
+                        <h5>水平居中设置：</h5>
+                        <p>1.行内元素 : 设置 text-align:center；</p>
+                        <p>2.Flex布局: 设置display:flex;justify-content:center;(灵活运用,支持Chroime，Firefox，IE9+)</p>
+                        <h5>垂直居中设置：</h5>
+                        <p>1.父元素高度确定的单行文本（内联元素）: 设置 height = line-height；</p>
+                        <p>2.父元素高度确定的多行文本（内联元素）:<br/> a:插入 table （插入方法和水平居中一样），然后设置 vertical-align:middle；<br/>
+                            b:先设置 display:table-cell 再设置 vertical-align:middle；</p>
+                        <h4><strong>块级元素居中方案</strong></h4>
+                        <h5>水平居中设置：</h5>
+                        <p>1.定宽块状元素 : 设置 左右 margin 值为 auto；</p>
+                        <p>2.不定宽块状元素 :<br/> a. 在元素外加入 table 标签（完整的，包括 table、tbody、tr、td），该元素写在 td 内，然后设置 margin 的值为
+                            auto；<br/>b:给该元素设置 displa:inine 方法；<br/>c:父元素设置 position:relative 和 left:50%，子元素设置
+                            position:relative 和 left:50%；
+                        </p>
+                        <h5>垂直居中设置：</h5>
+                        <p>使用position:absolute（fixed）,设置left、top、margin-left、margin-top的属性;</p>
+                        <p>利用position:fixed（absolute）属性，margin:auto这个必须不要忘记了;</p>
+                        <p>利用display:table-cell属性使内容垂直居中;</p>
+                        <p>使用css3的新属性transform:translate(x,y)属性;</p>
+                        <p>使用:before元素;</p>
+                    </div>
+                </div>
+                <div class="panel panel-success">
+                    <div class="panel-heading">5. 写出几种IE6 BUG的解决方法</div>
+                    <div class="panel-body">
+                        <p>双边距BUG float引起的 使用display</p>
+                        <p>3像素问题 使用float引起的 使用dislpay:inline -3px</p>
+                        <p>超链接hover 点击后失效 使用正确的书写顺序 link visited hover active</p>
+                        <p>Ie z-index问题 给父级添加position:relative</p>
+                        <p>Png 透明 使用js代码 改</p>
+                        <p>Min-height 最小高度 ！Important 解决’</p>
+                        <p>select 在ie6下遮盖 使用iframe嵌套</p>
+                        <p>为什么没有办法定义1px左右的宽度容器（IE6默认的行高造成的，使用over:hidden,zoom:0.08 line-height:1px）</p>
+                    </div>
+                </div>
+                <div class="panel panel-success">
+                    <div class="panel-heading">6. 页面导入样式时，使用link和@import有什么区别？</div>
+                    <div class="panel-body">
+                        <p>link属于XHTML标签，除了加载CSS外，还能用于定义RSS, 定义rel连接属性等作用；而@import是CSS提供的，只能用于加载CSS;</p>
+                        <p>页面被加载的时，link会同时被加载，而@import引用的CSS会等到页面被加载完再加载;</p>
+                        <p>import是CSS2.1 提出的，只在IE5以上才能被识别，而link是XHTML标签，无兼容问题;</p>
+                    </div>
+                </div>
+                <div class="panel panel-success">
+                    <div class="panel-heading">7. 介绍一下CSS的盒子模型？</div>
+                    <div class="panel-body">
+                        <p>有两种， IE 盒子模型、标准 W3C 盒子模型；IE的content部分包含了 border 和 pading;</p>
+                        <p>盒模型： 内容(content)、填充(padding)、边界(margin)、 边框(border).</p>
+                    </div>
+                </div>
+                <div class="panel panel-success">
+                    <div class="panel-heading">8. CSS 选择符有哪些？哪些属性可以继承？优先级算法如何计算？ CSS3新增伪类有那些？</div>
+                    <div class="panel-body">
+                        <p>id选择器（ # myid）</p>
+                        <p>类选择器（.myclassname）</p>
+                        <p>标签选择器（div, h1, p）</p>
+                        <p>相邻选择器（h1 + p）</p>
+                        <p>子选择器（ul > li）</p>
+                        <p>后代选择器（li a）</p>
+                        <p>通配符选择器（ * ）</p>
+                        <p>属性选择器（a[rel = “external”]）</p>
+                        <p>伪类选择器（a: hover, li: nth – child）</p>
+                        <p>可继承的样式： font-size font-family color, UL LI DL DD DT;</p>
+                        <p>不可继承的样式：border padding margin width height ;</p>
+                        <p>优先级就近原则，同权重情况下样式定义最近者为准;</p>
+                        <p>优先级为:<code>!important > id > class > tag</code>
+                            important 比 内联优先级高
+                        </p>
+                    </div>
+                </div>
+                <div class="panel panel-success">
+                    <div class="panel-heading">9. CSS3有哪些新特性？</div>
+                    <div class="panel-body">
+                        <p>CSS3实现圆角（border-radius:8px），阴影（box-shadow:10px），
+                            对文字加特效（text-shadow、），线性渐变（gradient），旋转（transform）</p>
+                        <p>transform:rotate(9deg) scale(0.85,0.90) translate(0px,-30px) skew(-9deg,0deg);//旋转,缩放,定位,倾斜
+                            增加了更多的CSS选择器 多背景 rgba</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
